@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Portfolio-Trần Quang Khã</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS chuẩn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #3498db;
+      --text-main: #333;
+      --bg-light: #f4f7f6;
+    }
+
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+
+    /* Navbar sang trọng */
+    .navbar { margin-bottom: 0; border-radius: 0; background: #fff; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 0; }
+    .navbar-brand { font-weight: 700; color: var(--primary-color) !important; letter-spacing: 1px; }
+    .nav li a { font-weight: 600; transition: 0.3s; color: #555 !important; }
+    .nav li a:hover, .nav li.active a { color: var(--accent-color) !important; background: transparent !important; }
+
+    /* Sidebar cá nhân */
+    .sidenav { background: #fff; padding: 30px 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 20px; text-align: center; }
+    .avatar-wrapper { position: relative; display: inline-block; margin-bottom: 20px; }
+    .avatar-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.5s; }
+    .avatar-img:hover { transform: scale(1.05) rotate(5deg); }
+    
+    /* Nội dung chính */
+    .main-content { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 20px; min-height: 800px; }
+    h1 { font-weight: 700; color: var(--primary-color); margin-bottom: 25px; }
+    .section-title { border-left: 5px solid var(--accent-color); padding-left: 15px; margin: 30px 0 20px; font-weight: 600; }
+
+    /* Tiện ích - Widget */
+    .well { background: #fff; border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 20px; }
+    .map-container { border-radius: 10px; overflow: hidden; margin-top: 15px; }
+
+    /* Footer */
+    footer { background: var(--primary-color); color: #bdc3c7; padding: 40px 0; margin-top: 50px; }
+    .social-icons a { color: #fff; font-size: 20px; margin: 0 10px; transition: 0.3s; }
+    .social-icons a:hover { color: var(--accent-color); }
+
+    /* Hiệu ứng mượt */
+    .btn-custom { background: var(--accent-color); color: #fff; border-radius: 25px; padding: 10px 25px; border: none; transition: 0.3s; }
+    .btn-custom:hover { background: #2980b9; transform: translateY(-2px); color: #fff; }
+
+    @media screen and (max-width: 767px) { .row.content {height: auto;} }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Website TqK</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">TRANG CHỦ</a></li>
+        <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+        <li><a href="trainghiem.html">TRẢI NGHIỆM</a></li>
+        <li><a href="kinhnghiem.html">KINH NGHIỆM</a></li>
+        <li><a href="hoatdong.html">HOẠT ĐỘNG</a></li>
+        <li><a href="khenthuong.html">KHEN THƯỞNG</a></li>
+        <li><a href="lienhe.html">LIÊN HỆ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container" style="margin-top: 80px;">    
+  <div class="row">
+   <!-- CỘT TRÁI: PROFILE -->
+    <div class="col-sm-3">
+      <div class="sidenav">
+        <div class="avatar-wrapper">
+         <img src="image/image1.jpg" alt="Profile" class="avatar-img">
+        </div>
+        <h4>Trần Quang Khã</h4>
+        <p class="text-muted">Sinh viên Công nghệ thông tin tại TVU</p>
+        <hr>
+        <div class="text-left">
+          <p><i class="fa fa-envelope"></i> khacr7@gmail.com</p>
+          <p><i class="fa fa-phone"></i> 0909.9099.8686</p>
+          <p><i class="fa fa-map-marker"></i> Vĩnh Long</p>
+        </div>
+        <hr>
+        <a href="lienhe.html" class="btn btn-custom btn-block">Kết nối yêu thương với tôi</a>
+      </div>
+    </div>
+    <!-- CỘT GIỮA: NỘI DUNG CHÍNH -->
+    <div class="col-sm-6"> 
+      <div class="main-content">
+  <h1 class="text-primary">Dự Án & Kinh Nghiệm</h1>
+  <hr>
+  <table class="table table-hover">
+    <thead>
+      <tr class="info">
+        <th>Thời gian</th>
+        <th>Dự án/Đề tài</th>
+        <th>Vai trò</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>05/2026</td>
+        <td>Xây dựng Website Giới thiệu bản thân</td>
+        <td>Lập trình viên chính</td>
+      </tr>
+      <tr>
+        <td>05/2026</td>
+        <td>Xây dựng Website Nhạc Yêu Thích</td>
+        <td>Lập trình viên chính</td>
+      </tr>
+      <tr>
+        <td>05/2026</td>
+        <td>Nghiên cứu hiệu quả thực tiễn của việc ứng dụng web trong phục hồi tâm lý trong thời đại số</td>
+        <td>Thành viên nhóm</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 class="section-title">Chi tiết dự án nổi bật</h3>
+  <p>Phát triển dự án dựa vào HTML và CSS lẫn javascript.</p>
+</div>
+
+   <!-- CỘT PHẢI: WIDGETS -->
+<div class="well" style="padding: 10px; border-radius: 15px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+  <h4 class="text-center" style="font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+    <i class="fa fa-university"></i> VỊ TRÍ CỦA TÔI
+  </h4>
+  <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.8373809664654!2d106.34407851128362!3d10.274797089803328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a01726a9701041%3A0x7f48b11116f38094!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBUcsOgIFZpbmg!5e0!3m2!1svi!2s!4v1715674000000!5m2!1svi!2s" 
+      width="100%" 
+      height="280" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <p class="text-center" style="margin-top: 10px; font-size: 13px; color: #7f8c8d;">
+    <small>Số 126 Nguyễn Thiện Thành, Khóm 4, Phường 5, TP. Trà Vinh</small>
+  </p>
+</div>
+
+      <div class="well text-center" style="background: linear-gradient(135deg, #3498db, #8e44ad); color: white;">
+        <h4>Kỹ năng</h4>
+        <p>HTML5 / Ngôn ngữ C / CSS and JS</p>
+        <p>UI/UX Design</p>
+        <p>Bootstrap 3 & 4</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center">
+  <div class="container">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1BAPfwrPqr/?mibextid=wwXIfr"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/_qkar.qipy?igsh=YWo3aHFyNjhjeTJ5&utm_source=qr"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <p style="margin-top: 20px;">© 2026 Designed by <strong>Trần Quang Khã </strong>. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
