@@ -4,7 +4,6 @@
   <title>Portfolio-Trần Quang Khã</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS chuẩn -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,32 +17,37 @@
     }
 
     body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+    
     /* Navbar sang trọng */
     .navbar { margin-bottom: 0; border-radius: 0; background: #fff; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 0; }
     .navbar-brand { font-weight: 700; color: var(--primary-color) !important; letter-spacing: 1px; }
     .nav li a { font-weight: 600; transition: 0.3s; color: #555 !important; }
     .nav li a:hover, .nav li.active a { color: var(--accent-color) !important; background: transparent !important; }
-/* Back trang chu */ 
-  .back-btn{
-    position:fixed;
-    top:20px;
-    left:20px;
 
-    background:#ffcfec;
-    color:#070707;
-    text-decoration:none;
+    /* Nút Back trang chủ cố định */ 
+    .back-btn {
+        position: fixed;
+        top: 85px; /* Điều chỉnh để không bị thanh Navbar che mất */
+        left: 20px;
+        background: #ffcfec;
+        color: #070707 !important;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 15px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        box-shadow: 0 8px 20px rgba(0,0,0,.15);
+        z-index: 1000; /* Đảm bảo nút luôn nổi lên trên cùng */
+        transition: transform 0.2s, background 0.2s;
+    }
+    .back-btn:hover {
+        transform: scale(1.05);
+        background: #fca1d9;
+        text-decoration: none;
+    }
 
-    padding:14px 22px;
-    border-radius:15px;
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    font-weight:600;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
     /* Sidebar cá nhân */
     .sidenav { background: #fff; padding: 30px 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 20px; text-align: center; }
     .avatar-wrapper { position: relative; display: inline-block; margin-bottom: 20px; }
@@ -68,14 +72,18 @@
     .btn-custom { background: var(--accent-color); color: #fff; border-radius: 25px; padding: 10px 25px; border: none; transition: 0.3s; }
     .btn-custom:hover { background: #2980b9; transform: translateY(-2px); color: #fff; }
 
-    @media screen and (max-width: 767px) { .row.content {height: auto;} }
+    @media screen and (max-width: 767px) { 
+        .row.content {height: auto;} 
+        .back-btn { position: static; display: block; text-center: center; margin-bottom: 15px; width: 100%; text-align: center; }
+    }
   </style>
 </head>
 <body>
- <a href="https://khatran1806.github.io/khartran1806/" class="back-btn">
-    <i class="fa-solid fa-arrow-left"></i>
-    Quay lại Trang Chủ
+
+<a href="index.html" class="back-btn">
+    <i class="fa fa-arrow-left"></i> Quay lại Trang Chủ
 </a>
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -87,11 +95,7 @@
     
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-         <a href="https://khatran1806.github.io/khartran1806/" class="back-btn">
-    <i class="fa-solid fa-arrow-left"></i>
-    Quay lại Trang Chủ
-</a>
-        <li class="active"><a href="index.html">TRANG CHỦ</a></li>
+        <li><a href="index.html">TRANG CHỦ</a></li>
         <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
         <li><a href="trainghiem.html">TRẢI NGHIỆM</a></li>
         <li><a href="kinhnghiem.html">KINH NGHIỆM</a></li>
@@ -102,10 +106,10 @@
     </div>
   </div>
 </nav>
-<div class="container" style="margin-top: 80px;">    
+
+<div class="container" style="margin-top: 80px;">   
   <div class="row">
-   <!-- CỘT TRÁI: PROFILE -->
-    <div class="col-sm-3">
+   <div class="col-sm-3">
       <div class="sidenav">
         <div class="avatar-wrapper">
           <img src="image/image1.jpg" alt="Profile" class="avatar-img">
@@ -122,7 +126,7 @@
         <a href="lienhe.html" class="btn btn-custom btn-block">Kết nối yêu thương với tôi</a>
       </div>
     </div>
-    <!-- CỘT GIỮA: NỘI DUNG CHÍNH -->
+    
     <div class="col-sm-6"> 
       <div class="main-content">
         <h1>À nhon xê ô , mình là Khã </h1>
@@ -131,9 +135,9 @@
         <h3 class="section-title">Một trong các cảnh đẹp tôi từng ghé thăm</h3>
         <div class="embed-responsive embed-responsive-16by9" style="border-radius: 10px; overflow: hidden;">
           <video width="640" height="360" controls>
-        <source src="video/video1.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ thẻ video này.
-        </video>
+            <source src="video/video1.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ thẻ video này.
+          </video>
         </div>
 
         <h3 class="section-title">Nhạc tôi yêu thích</h3>
@@ -148,26 +152,26 @@
       </div>
     </div>
 
-    <!-- CỘT PHẢI: WIDGETS -->
-<div class="well" style="padding: 10px; border-radius: 15px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-  <h4 class="text-center" style="font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
-    <i class="fa fa-university"></i> VỊ TRÍ CỦA TÔI
-  </h4>
-  <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.8373809664654!2d106.34407851128362!3d10.274797089803328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a01726a9701041%3A0x7f48b11116f38094!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBUcsOgIFZpbmg!5e0!3m2!1svi!2s!4v1715674000000!5m2!1svi!2s" 
-      width="100%" 
-      height="280" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-  <p class="text-center" style="margin-top: 10px; font-size: 13px; color: #7f8c8d;">
-    <small>Số 126 Nguyễn Thiện Thành, Khóm 4, Phường 5, TP. Trà Vinh</small>
-  </p>
-</div>
+    <div class="col-sm-3">
+      <div class="well" style="padding: 10px; border-radius: 15px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h4 class="text-center" style="font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+          <i class="fa fa-university"></i> VỊ TRÍ CỦA TÔI
+        </h4>
+        <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.8373809664654!2d106.34407851128362!3d10.274797089803328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a01726a9701041%3A0x7f48b11116f38094!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBUcsOgIFZpbmg!5e0!3m2!1svi!2s!4v1715674000000!5m2!1svi!2s" 
+            width="100%" 
+            height="280" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+           iframe>
+        </div>
+        <p class="text-center" style="margin-top: 10px; font-size: 13px; color: #7f8c8d;">
+          <small>Số 126 Nguyễn Thiện Thành, Khóm 4, Phường 5, TP. Trà Vinh</small>
+        </p>
+      </div>
 
       <div class="well text-center" style="background: linear-gradient(135deg, #3498db, #8e44ad); color: white;">
         <h4>Kỹ năng</h4>
@@ -176,6 +180,7 @@
         <p>Bootstrap 3 & 4</p>
       </div>
     </div>
+    
   </div>
 </div>
 
@@ -192,4 +197,5 @@
 </footer>
 
 </body>
+</html>
 </html>
